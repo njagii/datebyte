@@ -119,11 +119,23 @@ export default function EnchantingDateProposalApp() {
         <Dialog>
           <DialogTrigger asChild>
             <Button
-              variant="outline"
-              className="border-pink-300 text-pink-500 hover:bg-pink-100 font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              No
-            </Button>
+  variant="outline"
+  onMouseEnter={(e) => {
+    const button = e.currentTarget;
+    button.style.position = "absolute";
+    button.style.left = `${Math.random() * 70 + 10}%`;
+    button.style.top = `${Math.random() * 70 + 10}%`;
+  }}
+  onClick={(e) => {
+    const button = e.currentTarget;
+    button.style.position = "absolute";
+    button.style.left = `${Math.random() * 70 + 10}%`;
+    button.style.top = `${Math.random() * 70 + 10}%`;
+  }}
+  className="border-pink-300 text-pink-500 hover:bg-pink-100 font-bold py-2 px-4 rounded-full transition-all duration-300"
+>
+  No
+</Button>
           </DialogTrigger>
           <DialogContent className="bg-pink-50 border-2 border-pink-300">
             <DialogHeader>
