@@ -116,18 +116,21 @@ export default function EnchantingDateProposalApp() {
         >
           Yes, I&apos;d love to!
         </Button>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button
+<Button
+  type="button"
   variant="outline"
   onMouseEnter={(e) => {
     const button = e.currentTarget;
+    button.textContent = "Try again 😏";
     button.style.position = "absolute";
     button.style.left = `${Math.random() * 70 + 10}%`;
     button.style.top = `${Math.random() * 70 + 10}%`;
   }}
   onClick={(e) => {
+    e.preventDefault();
     const button = e.currentTarget;
+    const messages = ["No", "Are you sure?", "Really?", "Try again 😭", "Click yes instead"];
+    button.textContent = messages[Math.floor(Math.random() * messages.length)];
     button.style.position = "absolute";
     button.style.left = `${Math.random() * 70 + 10}%`;
     button.style.top = `${Math.random() * 70 + 10}%`;
@@ -136,35 +139,6 @@ export default function EnchantingDateProposalApp() {
 >
   No
 </Button>
-          </DialogTrigger>
-          <DialogContent className="bg-pink-50 border-2 border-pink-300">
-            <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-pink-600">
-                There is no &quot;NOOOOOO&quot;
-              </DialogTitle>
-              <DialogDescription className="text-lg text-pink-500">
-                You must come with me!
-              </DialogDescription>
-            </DialogHeader>
-            <motion.img
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              src="https://media1.tenor.com/m/2XJN2YEYbIAAAAAd/peach-and.gif"
-              alt="Excited bear gif"
-              className="w-full max-w-md mx-auto mb-4 rounded-lg shadow-lg"
-            />{" "}
-            <Button
-              onClick={() => {
-                handleAnswer("isAvailable", true);
-                triggerConfetti();
-              }}
-              className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              Okay, I&apos;ll come!
-            </Button>
-          </DialogContent>
-        </Dialog>
       </div>
     </motion.div>,
 
