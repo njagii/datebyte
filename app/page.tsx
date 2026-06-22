@@ -239,9 +239,9 @@ export default function EnchantingDateProposalApp() {
         {[
           { name: "Lasagna", icon: <Utensils className="w-6 h-6" /> },
           { name: "Chicken Pie", icon: <Utensils className="w-6 h-6" /> },
-          { name: "Chicken Shawarma", icon: <Utensils className="w-6 h-6" /> },
+          { name: "Charcuterie Board", icon: <Utensils className="w-6 h-6" /> },
           { name: "Snack Platter", icon: <Coffee className="w-6 h-6" /> },
-          { name: "Mix rice", icon: <Utensils className="w-6 h-6" /> },
+          { name: "Idk, Batman should choose", icon: <Utensils className="w-6 h-6" /> },
         ].map(({ name, icon }) => (
           <SelectButton
             key={name}
@@ -270,12 +270,11 @@ export default function EnchantingDateProposalApp() {
      
     <motion.div key="step3" className="text-center" {...fadeInUp}>
       <h2 className="text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
-        What shall we watch together?
+        What do you want to do?
       </h2>
       <div className="grid grid-cols-2 gap-6 mb-6">
         {[
-          "The Notebook",
-          "La La Land",
+          "Bowling (I might will destroy you at that)",
           "Titanic",
           "Pride and Prejudice",
           "Anyone But You",
