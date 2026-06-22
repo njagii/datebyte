@@ -18,7 +18,6 @@ import confetti from "canvas-confetti";
 import ThemedCard from "@/components/ThemedCard";
 import Sparkles from "@/components/Sparkles";
 import FloatingOrbs from "@/components/FloatingOrbs";
-import FairyFooter from "@/components/FairyFooter";
 import StepCard from "@/components/StepCard";
 import SelectButton from "@/components/SelectButton";
 
@@ -411,7 +410,6 @@ export default function EnchantingDateProposalApp() {
           <Sparkles count={18} />
           <AnimatePresence mode="wait">{steps[step]}</AnimatePresence>
         </ThemedCard>
-        <FairyFooter />
       </div>
     </div>
   );
